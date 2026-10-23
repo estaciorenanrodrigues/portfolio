@@ -336,5 +336,5 @@ export const certifications = [
 export const social = {
   github: "https://github.com/estaciorenan",
   linkedin: profile.linkedin,
-  whatsapp: "https://wa.link/q12jf9",
+  whatsapp: "https://wa.me/5588988461635",
 };
