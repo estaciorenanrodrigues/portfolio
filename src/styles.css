@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 5px;
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 2000;
+  background: var(--color-selection-background);
+  color: var(--color-selection-text);
+  padding: 12px 20px;
+  border-radius: var(--radius-small);
+}
+.skip-link:focus {
+  top: 12px;
+}
+.MuiContainer-root.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: var(--header-height);
+}
+.brand {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+.nav-link {
+  font-size: var(--font-navigation);
+  transition: color var(--motion-duration);
+}
+.nav-link:hover {
+  color: var(--color-interactive);
+}
+.section {
+  padding-block: var(--section-space);
+  scroll-margin-top: 100px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: center;
+  gap: 64px;
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 110px;
+  min-height: 740px;
+}
+.portrait {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+  justify-self: center;
+}
+.explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  font-size: 12px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 100px;
+}
+.experience-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+}
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--section-gap);
+  margin-bottom: 44px;
+}
+.projects-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+.MuiCard-root.project-card {
+  transition:
+    transform var(--motion-duration),
+    border-color var(--motion-duration);
+}
+.project-card:hover {
+  transform: translateY(calc(-1 * var(--motion-distance)));
+  border-color: var(--color-interactive);
+}
+.project-image-wrap {
+  overflow: hidden;
+  padding: 20px 20px 0;
+  background: rgba(130, 150, 140, 0.08);
+}
+.project-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 5px 5px 0 0;
+}
+.personal-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 48px;
+  border-radius: var(--radius-card);
+  scroll-margin-top: 110px;
+}
+.contact-section {
+  text-align: center;
+  padding-block: 120px;
+}
+.MuiContainer-root.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 28px;
+}
+@media (max-width: 899px) {
+  .hero {
+    gap: 32px;
+    min-height: auto;
+  }
+  .about-grid {
+    gap: 40px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-image {
+    height: auto;
+    aspect-ratio: 16 / 8;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .skills-grid {
+    gap: 20px;
+  }
+  .personal-section {
+    padding: 32px;
+  }
+}
+@media (max-width: 599px) {
+  .header-inner {
+    min-height: var(--header-mobile-height);
+  }
+  .section {
+    padding-block: var(--section-mobile-space);
+    scroll-margin-top: 80px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 48px;
+    padding-bottom: 90px;
+    gap: 48px;
+  }
+  .portrait {
+    width: 85%;
+    max-width: 350px;
+  }
+  .about-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .experience-row,
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .personal-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
