@@ -1,21 +1,117 @@
 export interface Project {
   id: string;
   title: string;
+  company: string;
   category: string;
   image: string;
   description: string;
   contribution: string;
   technologies: string[];
-  aboutUrl: string;
-  projectUrl: string;
+  aboutUrl?: string;
+  projectUrl?: string;
 }
 
 export const projects: Project[] = [
   {
+    id: "gaspec",
+    title: "Gaspec",
+    company: "Verity",
+    category: "Especificações técnicas",
+    image: "/media/works/gaspec.png",
+    description:
+      "Gestão de especificações técnicas, materiais, equipamentos, serviços, encargos e empresas.",
+    contribution:
+      "Desenvolvimento do Front-end em Angular com componentes standalone, integração com APIs REST, cadastros multi-etapa, composição de serviços e componentes compartilhados como select com paginação e scroll infinito.",
+    technologies: ["Angular", "TypeScript", "RxJS", "REST APIs", "SCSS"],
+  },
+  {
+    id: "supria",
+    title: "Supria",
+    company: "AWRIGHT",
+    category: "Gestão de portfólios",
+    image: "/media/works/supria.webp",
+    description:
+      "Plataforma web e mobile de gestão de portfólios, projetos, megaprojetos e custos.",
+    contribution:
+      "Componentes reutilizáveis para uma solução white label, controle de permissões com RBAC, integração com APIs REST e aplicativo offline-first com sincronização via HTTP ETag.",
+    technologies: [
+      "React",
+      "React Native",
+      "TypeScript",
+      "REST APIs",
+      "RBAC",
+      "Offline-first",
+      "HTTP ETag",
+    ],
+  },
+  {
+    id: "3con",
+    title: "3CON",
+    company: "3CON Consultoria e Sistemas",
+    category: "Gestão operacional",
+    image: "/media/works/3con.png",
+    description:
+      "Soluções web de gestão operacional, logística, contratos, licenças e análise de CNPJ alfanumérico.",
+    contribution:
+      "Interfaces para 3Control, CNPJ Alfanumérico, TagCheck e 3CON Licenças em monorepo Nx, com formulários tipados, proteção de rotas e internacionalização em português, inglês e espanhol.",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Nx",
+      "Material UI",
+      "React Hook Form",
+      "Zod",
+      "SWR",
+    ],
+  },
+  {
+    id: "orion",
+    title: "Orion 2.0",
+    company: "domy",
+    category: "Agronegócio",
+    image: "/media/works/orion-2.0.png",
+    description:
+      "Gestão e monitoramento de armazenagem e secagem de grãos, na web e no mobile.",
+    contribution:
+      "Lead Front-end da squad web e mobile: organização por domínio, carregamento sob demanda, autenticação, permissões, internacionalização e painéis de monitoramento de silos e secadores.",
+    technologies: [
+      "Angular",
+      "React Native",
+      "TypeScript",
+      "Angular Material",
+      "Tailwind CSS",
+      "SCSS",
+    ],
+  },
+  {
+    id: "manfing",
+    title: "Manfing One",
+    company: "Manfing",
+    category: "Inteligência artificial",
+    image: "/media/works/manfing.png",
+    description: "Previsão de vendas e demanda com inteligência artificial.",
+    contribution:
+      "Desenvolvimento do Front-end da versão 2.0, incluindo módulos e componentes de dashboard, clientes e campanhas.",
+    technologies: [
+      "Vue",
+      "Vuex",
+      "Vue Router",
+      "Vuetify",
+      "JavaScript",
+      "SCSS",
+      "Bootstrap",
+      "Chart.js",
+    ],
+    aboutUrl: "https://www.manfing.com/funcionalidades",
+    projectUrl: "https://app.manfing.com/",
+  },
+  {
     id: "sismogran",
     title: "Sismogran",
+    company: "Grupo MTech",
     category: "Monitoramento",
-    image: "/media/works/sismogran_tela1.png",
+    image: "/media/works/Sismogran_mtech.PNG",
     description:
       "Monitoramento de temperatura e umidade de equipamentos e ambientes.",
     contribution:
@@ -35,8 +131,9 @@ export const projects: Project[] = [
   {
     id: "sismaplan",
     title: "Sismaplan",
+    company: "Grupo MTech",
     category: "Gestão integrada",
-    image: "/media/works/sismaplan_tela1.png",
+    image: "/media/works/Sismaplan_mtech.PNG",
     description:
       "Gestão integrada de ativos e serviços em uma única plataforma.",
     contribution:
@@ -54,27 +151,6 @@ export const projects: Project[] = [
     ],
     aboutUrl: "https://mtechsp.com.br/gestao/",
     projectUrl: "https://dtlab4.dtlab.com.br/",
-  },
-  {
-    id: "manfing",
-    title: "Manfing One",
-    category: "Inteligência artificial",
-    image: "/media/works/sismaplan_manfing1.png",
-    description: "Previsão de vendas e demanda com inteligência artificial.",
-    contribution:
-      "Desenvolvimento do Front-end da versão 2.0, incluindo módulos e componentes de dashboard, clientes e campanhas.",
-    technologies: [
-      "Vue",
-      "Vuex",
-      "Vue Router",
-      "Vuetify",
-      "JavaScript",
-      "SCSS",
-      "Bootstrap",
-      "Chart.js",
-    ],
-    aboutUrl: "https://www.manfing.com/funcionalidades",
-    projectUrl: "https://app.manfing.com/",
   },
 ];
 

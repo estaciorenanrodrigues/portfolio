@@ -60,7 +60,7 @@ export default function ProjectDialog({
               sx={{ width: "100%", height: "auto", borderRadius: 1, mb: 3 }}
             />
             <Typography variant="overline" color="primary">
-              {selected.category}
+              {selected.category} · {selected.company}
             </Typography>
             <Typography variant="h6" component="h3" sx={{ mt: 1 }}>
               {selected.description}
@@ -80,19 +80,25 @@ export default function ProjectDialog({
               ))}
             </Stack>
           </DialogContent>
-          <DialogActions sx={{ p: 2, flexWrap: "wrap", gap: 1 }}>
-            <Button href={selected.aboutUrl} {...external}>
-              Sobre o produto
-            </Button>
-            <Button
-              href={selected.projectUrl}
-              {...external}
-              variant="contained"
-              endIcon={<ArrowOutwardIcon />}
-            >
-              Visitar plataforma
-            </Button>
-          </DialogActions>
+          {(selected.aboutUrl || selected.projectUrl) && (
+            <DialogActions sx={{ p: 2, flexWrap: "wrap", gap: 1 }}>
+              {selected.aboutUrl && (
+                <Button href={selected.aboutUrl} {...external}>
+                  Sobre o produto
+                </Button>
+              )}
+              {selected.projectUrl && (
+                <Button
+                  href={selected.projectUrl}
+                  {...external}
+                  variant="contained"
+                  endIcon={<ArrowOutwardIcon />}
+                >
+                  Visitar plataforma
+                </Button>
+              )}
+            </DialogActions>
+          )}
         </>
       )}
     </Dialog>

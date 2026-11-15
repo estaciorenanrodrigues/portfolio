@@ -40,12 +40,16 @@ export default function Header({ mode, onToggleTheme }: HeaderProps) {
             component="a"
             href="#inicio"
             className="brand"
-            aria-label={`er. — ${profile.name}, início`}
+            aria-label={`ER — ${profile.name}, início`}
           >
-            er
-            <Box component="span" sx={{ color: "primary.main" }}>
-              .
-            </Box>
+            <Box
+              component="img"
+              src="/media/logo/logo.svg"
+              alt=""
+              width={40}
+              height={40}
+              sx={{ display: "block" }}
+            />
           </Box>
           <Stack
             component="nav"

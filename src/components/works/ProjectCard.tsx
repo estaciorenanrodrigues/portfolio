@@ -48,7 +48,7 @@ export default function ProjectCard({
             }}
           >
             <Typography variant="caption" color="primary">
-              {project.category}
+              {project.category} · {project.company}
             </Typography>
             <Typography variant="caption" color="text.secondary">
               0{index + 1}
